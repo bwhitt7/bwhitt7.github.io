@@ -1,16 +1,14 @@
-### Hi there 👋
+# Minimal Theme
 
-<!--
-**bwhitt7/bwhitt7** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+[Demo the Theme](https://orderedlist.com/minimal/)
 
-Here are some ideas to get you started:
+This is the raw HTML and styles that are used for the *minimal* theme on [GitHub Pages](http://pages.github.com/).
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Syntax highlighting is provided on GitHub Pages by [Pygments](http://pygments.org).
+
+# License
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).
+
+
+
