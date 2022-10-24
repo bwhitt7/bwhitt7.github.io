@@ -12,7 +12,15 @@
     <!--<script src="scale.fix.js"></script> -->
     <script src="https://kit.fontawesome.com/a57ffdbeb2.js" crossorigin="anonymous"></script>
     <script src="apod.js"></script>
-
+    <script>
+      function changeStar(){
+        var star_class = document.getElementById("star").className
+        if (star_class == "fa-regular fa-star fa-3x text-danger m-1")
+          document.getElementById("star").className = "fas fa-star fa-3x text-danger m-1"
+        else
+          document.getElementById("star").className = "fa-regular fa-star fa-3x text-danger m-1"
+      }
+    </script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,7 +45,10 @@
             <div class="card rounded-0 mx-auto p-2 text-center" style="height:100vh; background-color: rgba(0,0,0,0.7)">
               <div class="my-auto">
                 <h2 class="mb-0">Britney Whittington</h1>
-                <i class="fa-regular fa-star fa-3x text-danger m-1"></i>
+
+                <a onclick="changeStar()"><i id="star" class="fa-regular fa-star fa-3x text-danger m-1"></i></a>
+
+
                 <p>Towson University Student<br>Edgewood, MD</p>
                 <div>
                   <a href="https://www.linkedin.com/in/britney-whittington/" class="text-danger"><i class="fab fa-linkedin fa-2xl"></i></a>
