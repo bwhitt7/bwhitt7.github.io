@@ -12,13 +12,14 @@
     <!--<script src="scale.fix.js"></script> -->
     <script src="https://kit.fontawesome.com/a57ffdbeb2.js" crossorigin="anonymous"></script>
     <script src="apod.js"></script>
+    
     <script>
       function changeStar(){
         var star_class = document.getElementById("star").className
-        if (star_class == "fa-regular fa-star fa-3x text-danger m-1")
-          document.getElementById("star").className = "fas fa-star fa-3x text-danger m-1"
+        if (star_class == "fa-regular fa-star fa-3x text-danger m-1 fa-spin")
+          document.getElementById("star").className = "fas fa-star fa-3x text-danger m-1 fa-spin"
         else
-          document.getElementById("star").className = "fa-regular fa-star fa-3x text-danger m-1"
+          document.getElementById("star").className = "fa-regular fa-star fa-3x text-danger m-1 fa-spin"
       }
     </script>
 
@@ -46,7 +47,7 @@
               <div class="my-auto">
                 <h2 class="mb-0">Britney Whittington</h1>
 
-                <a onclick="changeStar()"><i id="star" class="fa-regular fa-star fa-3x text-danger m-1"></i></a>
+                <a onclick="changeStar()"><i id="star" style="cursor:pointer" class="fa-regular fa-star fa-3x text-danger m-1 fa-spin"></i></a>
 
 
                 <p>Towson University Student<br>Edgewood, MD</p>
