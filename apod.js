@@ -13,7 +13,7 @@ req.addEventListener("load", function(){
         document.getElementById("pic").textContent = response.url;
         document.getElementById("pic_hd").textContent = response.hdurl;
         document.getElementById("explanation").textContent = response.explanation;
-        document.getElementById('content').style.backgroundImage = "url("+response.hdurl+")"
+        //document.getElementById('content').style.backgroundImage = "url("+response.hdurl+")"
     }
 })
 
