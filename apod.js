@@ -12,6 +12,7 @@ req.addEventListener("load", function(){
         document.getElementById("date").textContent = response.date;
         document.getElementById("pic").textContent = response.hdurl;
         document.getElementById("explanation").textContent = response.explanation;
+        document.getElementById('content').style.backgroundImage = "url("+response.hdurl+")"
     }
 })
 
