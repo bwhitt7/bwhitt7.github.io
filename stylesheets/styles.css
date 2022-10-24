@@ -1,13 +1,13 @@
 body {
-  background-color: rgb(30 , 37, 48);
+  background-color: #fff;
   padding:50px;
-  font: 14px/1.5 Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color:#ffffff;
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color:#595959;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:rgb(153, 153, 153);
+  color:#222;
   margin:0 0 20px;
 }
 
@@ -25,33 +25,33 @@ h1 {
 }
 
 h2 {
-  color:#B71C24;
+  color:#393939;
   font-weight: 500;
 }
 
 h3, h4, h5, h6 {
-  color:#B71C24;
+  color:#494949;
   font-weight: 500;
 }
 
 a {
-  color:#B71C24;
+  color:#39c;
   text-decoration:none;
 }
 
 a:hover {
-  color:#B71C24;
+  color:#069;
 }
 
 a small {
   font-size:11px;
-  color:#B71C24;
+  color:#777;
   margin-top:-0.3em;
   display:block;
 }
 
 a:hover small {
-  color:#EC7E84;
+  color:#777;
 }
 
 .wrapper {
