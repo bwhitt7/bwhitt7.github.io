@@ -10,7 +10,8 @@ req.addEventListener("load", function(){
         var response = JSON.parse(req.responseText);
         document.getElementById("title").textContent = response.title;
         document.getElementById("date").textContent = response.date;
-        document.getElementById("pic").textContent = response.hdurl;
+        document.getElementById("pic").textContent = response.url;
+        document.getElementById("pic_hd").textContent = response.hdurl;
         document.getElementById("explanation").textContent = response.explanation;
         document.getElementById('content').style.backgroundImage = "url("+response.hdurl+")"
     }
