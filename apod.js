@@ -17,12 +17,12 @@ function findAPOD(date=""){
       document.getElementById("title").textContent = response.title;
       document.getElementById("date").textContent = response.date;
       document.body.style.backgroundImage = "url("+response.hdurl+")";
-      if (response.media_type === "video"){
-        document.getElementById("vid").src = response.url+"&autoplay=1&controls=0&loop=1&disablekb=1&iv_load_policy=3&modestbranding=1";
-      }
-      else{
-        document.getElementById("vid").src = "";
-      }
+      // if (response.media_type === "video"){
+      //   document.getElementById("vid").src = response.url+"&autoplay=1&controls=0&loop=1&disablekb=1&iv_load_policy=3&modestbranding=1";
+      // }
+      // else{
+      //   document.getElementById("vid").src = "";
+      // }
     }
   }
 }
