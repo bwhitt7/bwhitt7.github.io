@@ -5,7 +5,7 @@ $(document).ready(function() {
 });
 
 //find APOD. use date parameter (empty by default to get current date) for picking out the date
-function findAPOD(date=""){
+function findAPOD(date="", apod="astropix"){
     var req = new XMLHttpRequest(); //start HTTP request
     const url = "https://api.nasa.gov/planetary/apod?api_key="; //url of APOD nasa API
     const api_key = "xEJ0WheX967HwigGbbLqsPjW6gRoZhfoGl4sEhNV"; //current API key
@@ -21,10 +21,14 @@ function findAPOD(date=""){
 
             var response = JSON.parse(req.responseText); //parse through JSON of page
 
+            console.log(response);
             document.getElementById("title").textContent = response.title;  //put title info into text of #title
             document.getElementById("date").textContent = response.date;    //date into text of #date
             document.body.style.backgroundImage = "url("+response.hdurl+")"; //hd image into background of body
-            document.getElementById("piclink").href = response.hdurl;       //link to hd image into link of #piclink
+
+            document.getElementById("piclink").href = "https://apod.nasa.gov/apod/"+apod+".html";       //link to hd image into link of #piclink
+
+            
             document.getElementById("exp").textContent = "\""+response.explanation+"\" - APOD"; //explaination into text of #exp
 
 
@@ -43,15 +47,21 @@ function findAPOD(date=""){
             else { //if not image, show disclaimer, display default bg, and make info link go to the url instead
                 $("#vid").show();
                 document.body.style.backgroundImage = "url("+default_bg+")";
-                document.getElementById("piclink").href = response.url;
             }
         }
+        else if (req.status == 404 && req.readyState == 4)
+            alert("No APOD for this date.")
     }
 }
 
 //function called by date button
 //calls find APOD function and passes on the date
 function changeBG(){
-    let inputVal = document.getElementById("apoddate").value; //get value from date input
-    findAPOD(inputVal);
+    let date = document.getElementById("apoddate").value; //get value from date input
+    console.log(date);
+
+    var newdate = "ap"+date.substring(2,4) + date.substring(5,7) + date.substring(8,10);
+
+    console.log(newdate);
+    findAPOD(date, newdate);
 }

@@ -57,6 +57,7 @@
                     <div class="text-center mt-3 justify-content-evenly d-flex">
                       <a href="https://www.linkedin.com/in/britney-whittington/" class="text-danger" target="_blank"><i class="fab fa-linkedin fa-2xl"></i></a>
                       <a href="https://github.com/bwhitt7" class="text-danger" target="_blank"><i class="fab fa-github fa-2xl"></i></a>
+                      <a href="mailto:britneywhittington@gmail.com" class="text-danger" target="_blank"><i class="fas fa-envelope fa-2xl"></i></a>
                     </div>
 
                   <hr class="border-danger" style="border: none; border-bottom:#fff solid; opacity:1">
@@ -64,7 +65,8 @@
                   <div class="mt-4">
                     Pick date for APOD
                     <div>
-                      <input type="date" id="apoddate" name="apod">
+                      <input type="date" id="apoddate" name="apod" min="1995-06-16">
+
                       <button class="btn btn-danger pb-1" onclick="changeBG();"><i class="fas fa-check"></i></button>
                     </div>
                   </div>
@@ -74,9 +76,9 @@
               <div class="card-footer rounded-0 p-2 border-0" style="color:#ddd">
 
                 <div>
-                  <a id="piclink" class="text-danger" target="_blank"><i class="fas fa-circle-info" data-bs-toggle="tooltip" title="Link to content"></i></a>
+                  <a id="piclink" class="text-danger" target="_blank"><i class="fas fa-circle-info" data-bs-toggle="tooltip" title="Link to APOD page"></i></a>
 
-                  Background from APOD:
+                  APOD:
                   <div>
                     <span id="title"></span>, <span id="date"></span><span id="copyright"></span>
                   </div>
