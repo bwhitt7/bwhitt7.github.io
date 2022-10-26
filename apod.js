@@ -4,6 +4,9 @@ $(document).ready(function() {
     findAPOD();
 });
 
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 //find APOD. use date parameter (empty by default to get current date) for picking out the date
 function findAPOD(date="", apod="astropix"){
     var req = new XMLHttpRequest(); //start HTTP request
