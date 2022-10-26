@@ -1,30 +1,29 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scaled=1">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Britney Whittington</title>
-
-    <!--<link rel="stylesheet" href="styles.css">-->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a57ffdbeb2.js" crossorigin="anonymous"></script>
-    
-    <script>
-      function changeStar(){
-        var star_class = document.getElementById("star").className
-        if (star_class == "fa-regular fa-star fa-3x text-danger m-1 fa-spin"){
-          document.getElementById("star").className = "fas fa-star fa-3x text-danger m-1 fa-spin";
-        }
-        else
-          document.getElementById("star").className = "fa-regular fa-star fa-3x text-danger m-1 fa-spin"
-      }
-    </script>
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+
+    <script>
+      function changeStar(){
+          var star_class = document.getElementById("star").className
+          if (star_class == "fa-regular fa-star fa-3x text-danger m-1 fa-spin")
+              document.getElementById("star").className = "fas fa-star fa-3x text-danger m-1 fa-spin";
+          else
+              document.getElementById("star").className = "fa-regular fa-star fa-3x text-danger m-1 fa-spin"
+      }
+    </script>
+
+
   </head>
 
   <body style="background-repeat: no-repeat;
@@ -35,23 +34,21 @@
   background-blend-mode: lighten;
   background-color: rgb(60, 52, 67);
   ">
-  <!--<iframe id="vid" src="" style="z-index:-999; position:absolute; opacity:50%; width:100%; height:100%; left:0" class="p-0 m-0"></iframe>-->
-
     <div class="container-fluid p-0 m-0 w-75 mx-auto text-monospace" style="height: 100vh;">
-
       <div class="card border-0 rounded-0 h-100 text-white" style="background:none">
-
         <div class="row no-gutters">
-
           <div class="col-lg-4">
             <div class="card rounded-0 mx-auto text-center" style="height:100vh; background-color: rgba(30, 27, 32, 0.8); ">
+
               <div class="my-auto">
                 <div class="p-4">
+
                   <h2 class="mb-0">Britney Whittington</h2>
+
                   <a onclick="changeStar()"><i id="star" style="cursor:pointer" class="fa-regular fa-star fa-3x text-danger m-1 fa-spin"></i></a>
 
-
                   <p style="color:#ddd">Towson University Student<br>Edgewood, MD</p>
+
                   <div class="text-center mt-3">
                     <a href="https://www.linkedin.com/in/britney-whittington/" class="text-danger" ><i class="fab fa-linkedin fa-2xl"></i></a>
                     <a href="https://github.com/bwhitt7" class="text-danger"><i class="fab fa-github fa-2xl"></i></a>
@@ -61,58 +58,86 @@
                     Pick date for APOD
                     <div>
                       <input type="date" id="apoddate" name="apod">
-                      <button class="btn btn-danger rounded-0" onclick="changeBG();">Enter</button>
+                      <button class="btn btn-danger pb-1" onclick="changeBG();"><i class="fas fa-check"></i></button>
                     </div>
                   </div>
 
-
-
                 </div>
               </div>
+
               <div class="card-footer rounded-0 p-2" style="border-top:#fff solid; color:#ddd">
-                <div ><div><a id="piclink" class="text-danger"><i class="fas fa-circle-info"></i></a> Background from APOD:<div><span id="title"></span>, <span id="date"></span><span id="copyright"></span></div></div></div>
+
+                <div>
+                  <a id="piclink" class="text-danger"><i class="fas fa-circle-info" data-bs-toggle="tooltip" title="Link to content"></i></a>
+                  Background from APOD:
+                  <div>
+                    <span id="title"></span>, <span id="date"></span><span id="copyright"></span>
+                  </div>
+
+                </div>
+
                 <div id="vid" style="display:none;"><br>APOD is not an image on this date and won't be shown. Enjoy this animation of Jupiter instead! (By NASA/JPL)</div>
+
               </div>
+
             </div>
           </div>
 
           <div class="col-lg-8 my-auto">
-            <div class="card border-0 my-auto p-5" style="background:rgba(30, 27, 32,0.8)">
+            <div class="card border-0 my-auto p-5" style="background:rgba(30, 27, 32,0.8);">
               <div style="height:75vh; overflow:auto; ">
-                <div class="card p-2 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;"><h3 class="m-0">About</h3></div>
-                <p class="mx-2" style="color:#ddd">I'm an inspiring software engineer and website designer attending Towosn University. With many interests in programming, astronomy, and art, I want to one day assist astronomers with visualizing data!</p>
+                <div class="card p-2 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;">
+                  <h3 class="m-0">About</h3>
+                </div>
 
-
-                <div class="card p-2 mt-5 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;"><h3 class="m-0">Experience</h3></div>
-                <ul class="mx-2"style="color:#ddd;list-style-type:square;">
-                  <li>Currently Towson University for a Computer Science major with a Software Engineer concentration.</li>
-                  <li><a href="https://www.astroscholars.org/" class="text-danger" style="text-decoration:none;"><b>Astro Scholars</b></a> program in August 2022, hosted by the STSci and Johns Hopkins University.</li>
-                  <li><a href="https://ghc.anitab.org/" class="text-danger" style="text-decoration:none;"><b>Grace Hopper Celebration 2022</b></a></li>
-
-                </ul>
-
-                <div class="card p-2 mt-5 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;"><h3 class="m-0">Info about APOD</h3></div>
-                <p class="mx-2" id="exp" style="color:#ddd">
-                  No Explaination given for this picture.
+                <p class="mx-2" style="color:#ddd">
+                  I'm an inspiring software engineer and website designer attending Towosn University. With many interests in programming, astronomy, and art, I want to one day assist astronomers with visualizing data!
                 </p>
 
 
-          </div></div></div>
+                <div class="card p-2 mt-5 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;">
+                  <h3 class="m-0">Experience</h3>
+                </div>
+
+                <ul class="mx-2"style="color:#ddd;list-style-type:square;">
+
+                  <li>
+                    Currently Towson University for a Computer Science major with a Software Engineer concentration.
+                  </li>
+
+                  <li>
+                    <a href="https://www.astroscholars.org/" class="text-danger" style="text-decoration:none;"><b>Astro Scholars</b></a> program in August 2022, hosted by the STSci and Johns Hopkins University.
+                  </li>
+
+                  <li>
+                    <a href="https://ghc.anitab.org/" class="text-danger" style="text-decoration:none;"><b>Grace Hopper Celebration 2022</b></a>
+                  </li>
+
+                </ul>
+
+                <div class="card p-2 mt-5 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;">
+                  <h3 class="m-0">
+                    <a href="#collapseAPOD" data-bs-toggle="collapse" style="text-decoration:none" class="text-danger">
+                      <i class="fas fa-circle-info"></i> Info about APOD
+                    </a>
+                  </h3>
+                </div>
+
+                <div id="collapseAPOD" class="collapse">
+                  <p class="mx-2" id="exp" style="color:#ddd"></p>
+                </div>
+
+              </div>
+            </div>
+          </div>
 
         </div>
-
       </div>
-
     </div>
 
 
-    <script
-    src="https://code.jquery.com/jquery-3.6.1.js"
-    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-    crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
     <script src="apod.js"></script>
 
   </body>
