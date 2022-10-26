@@ -6,7 +6,7 @@ function findAPOD(date=""){
   var req = new XMLHttpRequest();
   var url = "https://api.nasa.gov/planetary/apod?api_key=";
   var api_key = "xEJ0WheX967HwigGbbLqsPjW6gRoZhfoGl4sEhNV";
-  var media_apod;
+  var default_bg = "https://astronomynow.com/wp-content/uploads/2015/02/1200px-PIA02863_-_Jupiter_surface_motion_animation.gif";
 
   req.open("GET", url + api_key +"&date=" +date, true);
   req.send();
@@ -17,12 +17,24 @@ function findAPOD(date=""){
       document.getElementById("title").textContent = response.title;
       document.getElementById("date").textContent = response.date;
       document.body.style.backgroundImage = "url("+response.hdurl+")";
-      // if (response.media_type === "video"){
-      //   document.getElementById("vid").src = response.url+"&autoplay=1&controls=0&loop=1&disablekb=1&iv_load_policy=3&modestbranding=1";
-      // }
-      // else{
-      //   document.getElementById("vid").src = "";
-      // }
+      document.getElementById("piclink").href = response.hdurl;
+      document.getElementById("exp").textContent = "\""+response.explanation+"\" - APOD";
+
+
+      if (response.copyright === "" || response.copyright === undefined)
+        document.getElementById("copyright").textContent = "";
+      else 
+        document.getElementById("copyright").innerHTML = ",  <i class='fa-regular fa-copyright'></i> "+response.copyright+"";
+
+
+      if (response.media_type === "image"){
+        $("#vid").hide();
+      }
+      else{
+        $("#vid").show();
+        document.body.style.backgroundImage = "url("+default_bg+")";
+        document.getElementById("piclink").href = response.url;
+      }
     }
   }
 }

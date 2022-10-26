@@ -44,16 +44,16 @@
         <div class="row no-gutters">
 
           <div class="col-lg-4">
-            <div class="card rounded-0 mx-auto text-center" style="height:100vh; background-color: rgba(30, 27, 32, 0.7); ">
+            <div class="card rounded-0 mx-auto text-center" style="height:100vh; background-color: rgba(30, 27, 32, 0.8); ">
               <div class="my-auto">
                 <div class="p-4">
-                  <h2 class="mb-0">Britney Whittington</h1>
+                  <h2 class="mb-0">Britney Whittington</h2>
                   <a onclick="changeStar()"><i id="star" style="cursor:pointer" class="fa-regular fa-star fa-3x text-danger m-1 fa-spin"></i></a>
 
 
-                  <p>Towson University Student<br>Edgewood, MD</p>
+                  <p style="color:#ddd">Towson University Student<br>Edgewood, MD</p>
                   <div class="text-center mt-3">
-                    <a href="https://www.linkedin.com/in/britney-whittington/" class="text-danger"><i class="fab fa-linkedin fa-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/britney-whittington/" class="text-danger" ><i class="fab fa-linkedin fa-2xl"></i></a>
                     <a href="https://github.com/bwhitt7" class="text-danger"><i class="fab fa-github fa-2xl"></i></a>
                   </div>
 
@@ -69,26 +69,31 @@
 
                 </div>
               </div>
-              <div class="card-footer rounded-0 p-2" style="border-top:#fff solid">
-                Background from APOD, titled <span id="title"></span>, <span id="date"></span>
+              <div class="card-footer rounded-0 p-2" style="border-top:#fff solid; color:#ddd">
+                <div ><div><a id="piclink" class="text-danger"><i class="fas fa-circle-info"></i></a> Background from APOD:<div><span id="title"></span>, <span id="date"></span><span id="copyright"></span></div></div></div>
+                <div id="vid" style="display:none;"><br>APOD is not an image on this date and won't be shown. Enjoy this animation of Jupiter instead! (By NASA/JPL)</div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-8 my-auto">
-            <div class="card border-0 my-auto p-5" style="background:rgba(30, 27, 32,0.7)">
+            <div class="card border-0 my-auto p-5" style="background:rgba(30, 27, 32,0.8)">
               <div style="height:75vh; overflow:auto; ">
-                <div class="card p-2 text-center sticky-top mb-2" style="background:#000">ABOUT</div>
-                <p class="mx-2 text-justify">I'm an inspiring software engineer and website designer attending Towosn University. With many interests in programming, astronomy, and art, I want to one day assist astronomers with visualizing data!</p>
+                <div class="card p-2 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;"><h3 class="m-0">About</h3></div>
+                <p class="mx-2" style="color:#ddd">I'm an inspiring software engineer and website designer attending Towosn University. With many interests in programming, astronomy, and art, I want to one day assist astronomers with visualizing data!</p>
 
-                <div class="card p-2 text-center sticky-top mt-5 mb-4" style="background:#000">PROJECTS</div>
-                <p>
-                  WIP
-                </p>
 
-                <div class="card p-2 text-center sticky-top mt-5 mb-4" style="background:#000">CONTACT</div>
-                <p>
-                  WIP
+                <div class="card p-2 mt-5 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;"><h3 class="m-0">Experience</h3></div>
+                <ul class="mx-2"style="color:#ddd;list-style-type:square;">
+                  <li>Currently Towson University for a Computer Science major with a Software Engineer concentration.</li>
+                  <li><a href="https://www.astroscholars.org/" class="text-danger" style="text-decoration:none;"><b>Astro Scholars</b></a> program in August 2022, hosted by the STSci and Johns Hopkins University.</li>
+                  <li><a href="https://ghc.anitab.org/" class="text-danger" style="text-decoration:none;"><b>Grace Hopper Celebration 2022</b></a></li>
+
+                </ul>
+
+                <div class="card p-2 mt-5 mb-2 text-uppercase rounded-0 border-danger" style="border: none; border-bottom:#fff solid; background:none;"><h3 class="m-0">Info about APOD</h3></div>
+                <p class="mx-2" id="exp" style="color:#ddd">
+                  No Explaination given for this picture.
                 </p>
 
 
