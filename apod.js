@@ -19,6 +19,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 function findAPOD(date="", apod="astropix"){
     var req = new XMLHttpRequest(); //start HTTP request
     const url = "https://api.nasa.gov/planetary/apod?api_key="; //url of APOD nasa API
+    const api_key = "xEJ0WheX967HwigGbbLqsPjW6gRoZhfoGl4sEhNV";
     const default_bg = "https://astronomynow.com/wp-content/uploads/2015/02/1200px-PIA02863_-_Jupiter_surface_motion_animation.gif"; //default bg when picture is not found
 
 
