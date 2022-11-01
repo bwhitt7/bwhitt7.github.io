@@ -6,24 +6,27 @@
 //have that installed, npm, and dotenv. but how does it work?
 //see if express can work 
 
-
 //jquery, once page loads, send HTTP request to get APOD data
 $(document).ready(function() {
-    findAPOD();
+    var msgFromServer;
+    $.get( "/", function( data ) {
+        msgFromServer = data;
+        alert( "Received data from server!"+msgFromServer );
+    });
+
+    findAPOD(msgFromServer);
 });
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 //find APOD. use date parameter (empty by default to get current date) for picking out the date
-function findAPOD(date="", apod="astropix"){
+function findAPOD(api, date="", apod="astropix"){
     var req = new XMLHttpRequest(); //start HTTP request
     const url = "https://api.nasa.gov/planetary/apod?api_key="; //url of APOD nasa API
-    const api_key = "xEJ0WheX967HwigGbbLqsPjW6gRoZhfoGl4sEhNV";
     const default_bg = "https://astronomynow.com/wp-content/uploads/2015/02/1200px-PIA02863_-_Jupiter_surface_motion_animation.gif"; //default bg when picture is not found
 
-
-    req.open("GET", url + api_key +"&date=" +date, true); //open HTTP request with composite URL
+    req.open("GET", url + api +"&date=" +date, true); //open HTTP request with composite URL
     req.send(); //send the request
 
     //if request goes through
