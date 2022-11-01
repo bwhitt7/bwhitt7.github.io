@@ -1,0 +1,20 @@
+{
+  "name": "bwhitt7",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwhitt7/bwhitt7.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwhitt7/bwhitt7.github.io/issues"
+  },
+  "homepage": "https://github.com/bwhitt7/bwhitt7.github.io#readme"
+}
