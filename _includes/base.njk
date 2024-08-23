@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <title>{{site.title}}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{site.description}}">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/a57ffdbeb2.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+        <script src="js/head.js"></script>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        {{env.apod}}
+        <div class="container-fluid p-0 m-0 mx-auto text-monospace" style="height: 100vh; width:75vw">
+                <div class="row no-gutters">
+                    <div class="col-lg-4">
+                        <div class="card rounded-0 border-0 mx-auto text-center left-col">
+                            <div class="my-auto p-sm-4 p-2">
+                                <hr>
+                                <a onclick="changeStar()">
+                                    <i id="star" style="cursor:pointer; --fa-animation-duration: 5s;" class="fa-regular fa-star fa-3x m-1 fa-spin accent"></i>
+                                </a>
+                                <h2 class="mb-0">{{site.name}}</h2>
+                                <p style="color:#ddd">{{site.subtitle}}</p>
+                                
+                                <div class="text-center mt-3 justify-content-evenly d-flex">
+                                {% for link in site.links %}
+                                    <a href="{{link.link}}" target="_blank" data-bs-toggle="tooltip" title="{{link.name}}" class="accent">
+                                        <i class="{{link.icon}} fa-2xl"></i>
+                                    </a>
+                                {% endfor %}
+                                </div>
+                                <div class="mt-3">
+                                    <a class="btn w-100" href="resume.pdf" type="application/pdf" target="_blank">
+                                        <b>Resume</b>
+                                    </a>
+                                </div>
+                                <hr>
+                                <div class="mt-4">
+                                    Pick date for APOD
+                                    <div>
+                                        <input type="date" id="apoddate" name="apod" min="1995-06-16">
+
+                                        <button class="btn pb-1" onclick="changeBG();">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="card-footer rounded-0 p-2 border-0" style="opacity:0.6">
+
+                                <div>
+                                    <a id="piclink" target="_blank" class="accent" style="text-decoration:none">
+                                        <i class="fas fa-circle-info" data-bs-toggle="tooltip" title="Link to APOD page"></i>
+                                    </a>
+                                    APOD
+
+                                    <div>
+                                        <span id="title"></span>, <span id="date"></span>
+                                        <span id="copyright"></span>
+                                    </div>
+
+                                </div>
+
+                                <div id="vid" style="display:none;"><br>APOD is not an image on this date and won't be shown. Enjoy this animation of Jupiter instead! (By NASA/JPL)</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 my-auto">
+                        <div class="card border-0 my-auto p-md-5 p-2 right-col">
+                            <div style="height:75vh; overflow:auto; ">
+
+                                {% for item in site.info %}
+                                
+                                <h3 class="m-0 text-uppercase">
+                                    <i class="fas fa-{{item.icon}} accent"></i> {{item.heading}}
+                                </h3>
+                                <hr class="mt-2">
+
+                                {% if item.list %}
+                                <ul class="mx-2"style="color:#ddd;list-style-type:square;">
+                                    {% for content in item.content %}
+                                    <li>{{content | safe}}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% else %}
+                                <p class="mx-2" style="color:#ddd">
+                                    {% for content in item.content %}
+                                    {{content | safe}}
+                                    {% endfor %}
+                                </p>
+                                {% endif %}
+
+                                {% endfor %}
+
+{# 
+                                <h3 class="m-0 text-uppercase">
+                                    <i class="fas fa-angles-right accent"></i> About
+                                </h3>
+                                <hr class="mt-2">
+
+                                <p class="mx-2" style="color:#ddd">
+                                    I'm an aspiring software engineer and scientific programmer with a life-long passion for art and astronomy! I've always held a fascination for the stars. Utilizing my skills in programming, I hope to one day contribute to the field of astronomy.
+                                </p>
+
+
+                                <h3 class="m-0 text-uppercase">
+                                    <i class="fas fa-angles-right accent"></i> Experience
+                                </h3>
+                                <hr class="mt-2">
+
+                                <ul class="mx-2"style="color:#ddd;list-style-type:square;">
+
+                                    <li>
+                                        Currently pursuing a Bachelor's in Science in Computer Science on the Software Engineering track, as well as an Astronomy Minor.
+                                    </li>
+
+                                    <li>
+                                        Currently working as a teacher assistant and undergraduate learning assistant at Towson University. I assist with computer science and astronomy classes.
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.astroscholars.org/" target="_blank">
+                                            <b>Astro Scholars</b>
+                                        </a> program in August 2022, hosted by the STSci and Johns Hopkins University.
+                                    </li>
+
+                                    <li>
+                                        <a href="https://ghc.anitab.org/" target="_blank">
+                                            <b>Grace Hopper Celebration 2022</b>
+                                        </a>
+                                    </li>
+
+                                    <li>See more on my resume!</li>
+
+                                </ul>
+
+                                <h3 class="m-0 text-uppercase">
+                                    <i class="fas fa-circle-info accent"></i> Info about APOD
+                                </h3>
+                                <hr class="mt-2">
+
+                                <p class="mx-2" id="exp" style="color:#ddd"></p> #}
+
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="js/apod.js"></script>
+    </body>
+</html>

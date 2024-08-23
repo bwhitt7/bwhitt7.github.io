@@ -1,0 +1,37 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center;
+    font-family:'Share Tech Mono';
+    background-blend-mode: lighten;
+    background-color: rgb(60, 52, 67);
+}
+
+
+.btn {
+    background-color: #E92F4B;
+}
+
+.left-col {
+    height:100vh;
+    background-color: rgba(30, 27, 32, 0.9)
+}
+
+.right-col {
+    background:rgba(30, 27, 32,0.9);
+}
+
+hr {
+    border: none;
+    border-bottom:rgba(255, 255, 255, 0.5) solid;
+    opacity:1
+}
+
+.accent {
+    color: #E92F4B;
+}
+
+a {
+    color: #E92F4B;
+}

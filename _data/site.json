@@ -1,0 +1,45 @@
+{
+    "title": "Britney Whittington",
+    "description": "My personal website",
+
+    "name": "Britney Whittington",
+    "subtitle": "Computer programer for hire",
+    "links": [
+        {
+            "icon": "fab fa-linkedin",
+            "link": "https://www.linkedin.com/in/britney-whittington/",
+            "name": "LinkedIn"
+        },
+        {
+            "icon": "fab fa-github",
+            "link": "https://github.com/bwhitt7",
+            "name": "GitHub"
+        },
+        {
+            "icon": "fas fa-envelope",
+            "link": "mailto:britneywhittington@gmail.com",
+            "name": "Email"
+        }
+    ],
+    "info": [
+        {
+            "heading": "about",
+            "icon": "angles-right",
+            "list": false,
+            "content": ["I'm an aspiring software engineer and scientific programmer with a life-long passion for art and astronomy! I've always held a fascination for the stars. Utilizing my skills in programming, I hope to one day contribute to the field of astronomy."]
+        },
+        {
+            "heading": "Experience",
+            "icon": "angles-right",
+            "list": true,
+            "content": [
+                "Towson University graduate with a degree in Computer Science and a minor in Astronomy.",
+                "Space Astronomy Summer Program Intern at Space Telescope Science Institute in 2024. A recording of my presentation and research can be found <a href='https://www.stsci.edu/opportunities/space-astronomy-summer-program/archived-student-presentations'>here</a>.",
+                "Astro Scholars program at Space Telescope Science Institute in 2022.",
+                "Worked as a teacher assistant for computer science and astronomy classes. I worked under Dr. Jennifer Scott, Dr. Miquel Angel Requena Torres, and Dr. Neda Saeedloei.",
+                "Dynamic Eclipse Broadcast team with various faculty and grad students at Towson University, where we took pictures of the April 8th 2024 total solar eclipse.",
+                "And more! Check out my LinkedIn and resume."
+            ]
+        }
+    ]
+}
