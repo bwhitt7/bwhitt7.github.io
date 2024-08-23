@@ -1,1 +1,1 @@
-# Heading
+Personal website that utilizes NASA's APOD API to dynamically update the background image. Built using bootstrap, jQuery, and fontawesome.
