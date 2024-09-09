@@ -1,0 +1,8 @@
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+domain: bwhitt7.github.io/      # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://bwhitt7.github.io/  # the base hostname and protocol for your site, e.g. http://example.com
