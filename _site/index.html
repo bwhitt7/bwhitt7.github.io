@@ -14,17 +14,18 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     </head>
     <body>
-        <div class="container-fluid p-0 m-0 mx-auto text-monospace" style="height: 100vh; width:75vw">
-                <div class="row no-gutters">
-                    <div class="col-lg-4">
-                        <div class="card rounded-0 border-0 mx-auto text-center left-col">
-                            <div class="my-auto p-sm-4 p-2">
+        <div class="container p-0 mx-auto text-monospace d-flex" style="height: 100vh;">
+                <div class="card border-0 my-auto p-md-5 p-2">
+                    <div class="row no-gutters">
+                    <div class="col-lg-4 h-100">
+                        <div class="mx-auto text-center">
+                            <div class="p-sm-4 p-2">
                                 <hr>
                                 <a onclick="changeStar()">
                                     <i id="star" style="cursor:pointer; --fa-animation-duration: 5s;" class="fa-regular fa-star fa-3x m-1 fa-spin accent"></i>
                                 </a>
                                 <h2 class="mb-0">Britney Whittington</h2>
-                                <p style="color:#ddd">Computer programer for hire</p>
+                                <p style="color:#ddd">Computer programmer for hire</p>
                                 
                                 <div class="text-center mt-3 justify-content-evenly d-flex">
                                 
@@ -59,9 +60,7 @@
                                 </div>
 
                             </div>
-
-                            <div class="card-footer rounded-0 p-2 border-0" style="opacity:0.6">
-
+                            <div style="opacity:0.6">
                                 <div>
                                     <a id="piclink" target="_blank" class="accent" style="text-decoration:none">
                                         <i class="fas fa-circle-info" data-bs-toggle="tooltip" title="Link to APOD page"></i>
@@ -74,62 +73,77 @@
                                     </div>
 
                                 </div>
-
                                 <div id="vid" style="display:none;"><br>APOD is not an image on this date and won't be shown. Enjoy this animation of Jupiter instead! (By NASA/JPL)</div>
-
                             </div>
-
                         </div>
                     </div>
 
-                    <div class="col-lg-8 my-auto">
-                        <div class="card border-0 my-auto p-md-5 p-2 right-col">
-                            <div style="height:75vh; overflow:auto; ">
+                    <div class="col-lg-8">
+                        <div>
+                            
+                            
+                            <h3 class="m-0 text-uppercase">
+                                <i class="fas fa-angles-right accent"></i> about
+                            </h3>
+                            <hr class="mt-2">
 
-                                
-                                
-                                <h3 class="m-0 text-uppercase">
-                                    <i class="fas fa-angles-right accent"></i> about
-                                </h3>
-                                <hr class="mt-2">
+                            
+                            
+                            <p class="mx-2" style="color:#ddd">
+                                I'm an aspiring software engineer and scientific programmer with a life-long passion for art and astronomy! I've always held a fascination for the stars. Utilizing my skills in programming, I hope to one day contribute to the field of astronomy.
+                            </p>
+                            
+                            <p class="mx-2" style="color:#ddd">
+                                Currently interning at Quansight, where I am making the NumPy test suite more thread-safe.
+                            </p>
+                            
+                            
 
-                                
-                                <p class="mx-2" style="color:#ddd">
-                                    
-                                    I'm an aspiring software engineer and scientific programmer with a life-long passion for art and astronomy! I've always held a fascination for the stars. Utilizing my skills in programming, I hope to one day contribute to the field of astronomy.
-                                    
-                                </p>
-                                
+                            
+                            
+                            <h3 class="m-0 text-uppercase">
+                                <i class="fas fa-angles-right accent"></i> Academics
+                            </h3>
+                            <hr class="mt-2">
 
+                            
+                            <ul class="mx-2"style="color:#ddd;list-style-type:square;">
                                 
+                                <li>Graduated from Towson University with a degree in Computer Science and a minor in Astronomy.</li>
                                 
-                                <h3 class="m-0 text-uppercase">
-                                    <i class="fas fa-angles-right accent"></i> Experience
-                                </h3>
-                                <hr class="mt-2">
+                                <li>Assisted with upgrading the Towson University 16" telescope, focusing on the software and computer capabilities.</li>
+                                
+                                <li>Was part of a Dynamic Eclipse Broadcast team at Towson University, where we took scientific pictures of the April 8th 2024 total solar eclipse.</li>
+                                
+                                <li>Attended Astro Scholars program at STScI/JHU in 2022.</li>
+                                
+                            </ul>
+                            
 
-                                
-                                <ul class="mx-2"style="color:#ddd;list-style-type:square;">
-                                    
-                                    <li>Towson University graduate with a degree in Computer Science and a minor in Astronomy.</li>
-                                    
-                                    <li>Space Astronomy Summer Program Intern at Space Telescope Science Institute in 2024. A recording of my presentation and research can be found <a href='https://www.stsci.edu/opportunities/space-astronomy-summer-program/archived-student-presentations'>here</a>.</li>
-                                    
-                                    <li>Astro Scholars program at Space Telescope Science Institute in 2022.</li>
-                                    
-                                    <li>Worked as a teacher assistant for computer science and astronomy classes. I worked under Dr. Jennifer Scott, Dr. Miquel Angel Requena Torres, and Dr. Neda Saeedloei.</li>
-                                    
-                                    <li>Dynamic Eclipse Broadcast team with various faculty and grad students at Towson University, where we took pictures of the April 8th 2024 total solar eclipse.</li>
-                                    
-                                    <li>And more! Check out my LinkedIn and resume.</li>
-                                    
-                                </ul>
-                                
+                            
+                            
+                            <h3 class="m-0 text-uppercase">
+                                <i class="fas fa-angles-right accent"></i> Experience
+                            </h3>
+                            <hr class="mt-2">
 
+                            
+                            <ul class="mx-2"style="color:#ddd;list-style-type:square;">
                                 
-                            </div>
+                                <li>Taught at <a href='https://cty.jhu.edu/'>CTY</a> as an Astrophysics teacher assistant.</li>
+                                
+                                <li>Space Astronomy Summer Program Intern at Space Telescope Science Institute in 2024. A recording of my presentation and research can be found <a href='https://www.stsci.edu/opportunities/space-astronomy-summer-program/archived-student-presentations'>here</a>. I also presented my research at the <a href='https://aas.org/meetings/aas245'>245th AAS meeting</a>.</li>
+                                
+                                <li>Worked as a teacher assistant for computer science and astronomy classes. I worked under Dr. Jennifer Scott, Dr. Miquel Angel Requena Torres, and Dr. Neda Saeedloei.</li>
+                                
+                                <li>And more! Check out my LinkedIn and resume.</li>
+                                
+                            </ul>
+                            
+
+                            
                         </div>
-
+                    </div>
                 </div>
             </div>
         </div>

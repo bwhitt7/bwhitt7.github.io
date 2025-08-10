@@ -3,7 +3,7 @@
     "description": "My personal website",
 
     "name": "Britney Whittington",
-    "subtitle": "Computer programer for hire",
+    "subtitle": "Computer programmer for hire",
     "links": [
         {
             "icon": "fab fa-linkedin",
@@ -26,18 +26,28 @@
             "heading": "about",
             "icon": "angles-right",
             "list": false,
-            "content": ["I'm an aspiring software engineer and scientific programmer with a life-long passion for art and astronomy! I've always held a fascination for the stars. Utilizing my skills in programming, I hope to one day contribute to the field of astronomy."]
+            "content": ["I'm an aspiring software engineer and scientific programmer with a life-long passion for art and astronomy! I've always held a fascination for the stars. Utilizing my skills in programming, I hope to one day contribute to the field of astronomy.",
+            "Currently interning at Quansight, where I am making the NumPy test suite more thread-safe."]
+        },
+        {
+            "heading": "Academics",
+            "icon": "angles-right",
+            "list": true,
+            "content": [
+                "Graduated from Towson University with a degree in Computer Science and a minor in Astronomy.",
+                "Assisted with upgrading the Towson University 16\" telescope, focusing on the software and computer capabilities.",
+                "Was part of a Dynamic Eclipse Broadcast team at Towson University, where we took scientific pictures of the April 8th 2024 total solar eclipse.",
+                "Attended Astro Scholars program at STScI/JHU in 2022."
+            ]
         },
         {
             "heading": "Experience",
             "icon": "angles-right",
             "list": true,
             "content": [
-                "Towson University graduate with a degree in Computer Science and a minor in Astronomy.",
-                "Space Astronomy Summer Program Intern at Space Telescope Science Institute in 2024. A recording of my presentation and research can be found <a href='https://www.stsci.edu/opportunities/space-astronomy-summer-program/archived-student-presentations'>here</a>.",
-                "Astro Scholars program at Space Telescope Science Institute in 2022.",
+                "Taught at <a href='https://cty.jhu.edu/'>CTY</a> as an Astrophysics teacher assistant.",
+                "Space Astronomy Summer Program Intern at Space Telescope Science Institute in 2024. A recording of my presentation and research can be found <a href='https://www.stsci.edu/opportunities/space-astronomy-summer-program/archived-student-presentations'>here</a>. I also presented my research at the <a href='https://aas.org/meetings/aas245'>245th AAS meeting</a>.",
                 "Worked as a teacher assistant for computer science and astronomy classes. I worked under Dr. Jennifer Scott, Dr. Miquel Angel Requena Torres, and Dr. Neda Saeedloei.",
-                "Dynamic Eclipse Broadcast team with various faculty and grad students at Towson University, where we took pictures of the April 8th 2024 total solar eclipse.",
                 "And more! Check out my LinkedIn and resume."
             ]
         }
